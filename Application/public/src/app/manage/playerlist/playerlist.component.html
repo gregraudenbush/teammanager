@@ -1,0 +1,17 @@
+<h3> <a [routerLink]="['/player', 'list']">List</a> |  <a [routerLink]="['/add']">Add Player</a></h3> 
+<table style="width:75%; ">
+  <tr style="background-color: grey;">
+    <th style="text-align:left;">Player Name</th>
+    <th style="text-align:left;">Preferred Position</th> 
+    <th style="text-align:left;">Actions</th>
+  </tr> 
+   <tr *ngFor="let user of users">
+    
+    <td>{{ user.name }}</td>
+    <td >{{ user.position }}</td> 
+
+    <td ><form (submit)="delete(users.indexOf(user))"> <input type="submit" name="delete" style="background-color: red; width:100px;" value="Delete"></form></td>
+  </tr> 
+  
+</table>
+<!-- {{ users }} -->

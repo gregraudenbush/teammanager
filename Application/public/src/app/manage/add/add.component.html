@@ -1,0 +1,32 @@
+<h3> <a [routerLink]="['/player', 'list']">List</a> |  <a [routerLink]="['/add']">Add Player</a></h3> 
+<div class="form">
+  
+
+  <form (submit)="add()" >
+    <table>    
+        <tr>
+          <td>Player Name:</td>
+          <td>  <input type="text" name="playername" 
+          
+          [(ngModel)] = "user.name"
+          #playername="ngModel"
+          >
+          </td>
+        </tr>
+        <tr>
+          <td>Preferred Position:</td>
+          <td>  <input type="text" name="playerposition" 
+          
+          [(ngModel)] = "user.position"
+          #playerposition="ngModel"
+          >
+          </td>
+        </tr>
+        
+        <tr>
+          <td></td>
+          <td><input type="submit" value="ADD" style="background-color: green;width:100px;"></td>
+        </tr>
+    </table>
+  </form>
+</div>
